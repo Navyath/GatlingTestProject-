@@ -59,10 +59,7 @@ class SampleSimulation extends Simulation {
           .get("/wp-content/plugins/wp-rocket/inc/front/js/lazyload-10.17.min.js.map")
           .headers(headers_3)))
 
-	setUp(scn)
-		.assertions(global.responseTime.max.lt(100))
-  
-	setUp(
+  setUp(
 	scn.inject(
 		nothingFor(5 seconds),
 		rampUsers(20) during (30 seconds))
@@ -73,4 +70,6 @@ class SampleSimulation extends Simulation {
 		global.responseTime.max.lt(5000),
 		global.successfulRequests.percent.gt(95)
 	)
+  
+  
 }
