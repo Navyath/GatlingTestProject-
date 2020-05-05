@@ -1,4 +1,4 @@
-package lv
+package simulations
 
 import scala.concurrent.duration._
 
