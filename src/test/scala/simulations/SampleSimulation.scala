@@ -67,11 +67,10 @@ class SampleSimulation extends Simulation {
 		nothingFor(5 seconds),
 		rampUsers(20) during (30 seconds))
 	)
-    .protocols(httpProtocol)
-    .maxDuration(60 seconds)
+	.protocols(httpProtocol)
+	.maxDuration(60 seconds)
 	.assertions(
 		global.responseTime.max.lt(5000),
 		global.successfulRequests.percent.gt(95)
 	)
-)
 }
