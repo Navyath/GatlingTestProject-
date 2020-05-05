@@ -39,6 +39,12 @@
         <groupId>io.gatling</groupId>
         <artifactId>gatling-maven-plugin</artifactId>
         <version>${gatling-maven-plugin.version}</version>
+		<configuration>
+		  <runMultipleSimulations>true</runMultipleSimulations>
+		  <!-- keep on executing multiple simulations even if one fails -->
+		  <continueOnAssertionFailure>true</continueOnAssertionFailure>
+		</configuration>
+      </plugin>
       </plugin>
     </plugins>
   </build>
